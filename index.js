@@ -25,6 +25,7 @@ const backgroundImages = [
     'image/kamil-s.jpg',
     'image/pedro-henrique-santos.jpg',
     'image/uriel-soberanes.jpg',
+    'image/igor-karimov.jpg'
 ]
 const photographer = document.querySelector('.js-photographer-name')
 let imageIndex = 0;
@@ -55,7 +56,7 @@ initializeGame();
 updateScore();
 resetBtn.addEventListener('click', resetScore)
 changeBg.addEventListener('click', changeBackgroundImage)
-setInterval(changeBackgroundImage, 10000)
+setInterval(changeBackgroundImage, 15000)
 
 
 function initializeGame(){
@@ -150,12 +151,30 @@ function resetScore(){
     updateScore()
 }
 
+
+/**
+ * Function that parses the image photographer and change the background image
+ */
 function changeBackgroundImage(){
     const body = document.body
     body.style.backgroundImage = `url('${backgroundImages[imageIndex]}')`
     let imageName = backgroundImages[imageIndex].split('/').pop();
     let imageN = imageName.split('.')[0].replace(/-/g, ' ')
-    photographer.innerHTML = imageN;
+
+
+    if(imageN === 'florian olivo'){
+        photographer.innerHTML = `<a target="_blank" href="https://unsplash.com/@florianolv"> ${imageN}</a>`;
+    } else if(imageN === 'jonathan petersson') {
+        photographer.innerHTML = `<a target="_blank" href="https://unsplash.com/@grizzlybear"> ${imageN}</a>`
+    } else if(imageN === 'kamil s'){
+        photographer.innerHTML = `<a target="_blank" href="https://unsplash.com/photos/two-man-watching-outside-gEjkDRh6ses?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash">${imageN}</a>`
+    } else if(imageN === 'pedro henrique santos'){
+        photographer.innerHTML = `<a href="https://unsplash.com/photos/grayscale-photo-of-people-playing-basketball-S6030AQQQp8" target="_blank">${imageN}</a>`
+    } else if(imageN === 'uriel soberanes'){
+        photographer.innerHTML = `<a href="https://unsplash.com/photos/man-wearing-sony-playstation-vr-MxVkWPiJALs" target="_blank">${imageN}</a>`
+    } else if(imageN === 'igor karimov'){
+        photographer.innerHTML = `<a href="https://unsplash.com/@ingvar_erik"_blank">${imageN}</a>`
+    }
     imageIndex = (imageIndex + 1) % backgroundImages.length
 }
 

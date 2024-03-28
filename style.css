@@ -1,5 +1,9 @@
+body{
+  font-family: 'Truculenta';
+}
+
 .cell{
-  width: 75px;
+  width: 70px;
   height: 75px;
   border: 2px solid;
   box-shadow: 0 0 0 2px;
@@ -8,8 +12,10 @@
   cursor: pointer;
 }
 #gameContainer{
-  font-family: "Permanent Marker", cursive;
+  font-family: "Roboto Condensed", cursive;
   text-align: center;
+  padding: 80px 60px;
+  padding-right: 90px;
 }
 #cellContainer{
   display: grid;
@@ -22,6 +28,14 @@
   padding:16px;
 }
 
+.score-container-css div:nth-child(2n){
+  margin: 10px 0;
+}
+
+.score-container-css div span{
+  letter-spacing: 2px;
+}
+
 .score-text {
   padding: 0;
   margin: 0;
@@ -29,6 +43,9 @@
 
 h1{
   text-align: center;
+  margin-left: 40px;
+  font-size: 3.5rem;
+  font-family: 'Truculenta';
   /* font-size: 35px; */
 }
 
@@ -56,22 +73,33 @@ section{
   padding-top: 10px;
   padding-bottom: 20px;
 }
+
 button{
-  font-family: "Permanent Marker", cursive;
+  font-family: "Roboto Condensed", cursive;
   font-weight: 600;
-  padding:8px 12px;
+  padding:12px 15px;
   margin: 4px;
-  border-radius: 9999px;
+  margin-top: 10px;
+  border-radius: 9px;
   cursor: pointer;
   transition: padding  0.2s ease-out;
   border: none;
 }
 
 button:hover{
-  padding:8px 20px;
+  padding:12px 20px;
 }
 
 .image-c-css{
   padding: 10px 0;
   font-size: small;
+}
+
+.css-photographer {
+  letter-spacing: 1px;
+}
+
+a{
+  color: white;
+  text-decoration: underline;
 }
