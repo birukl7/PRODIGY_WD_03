@@ -160,8 +160,6 @@ function changeBackgroundImage(){
     body.style.backgroundImage = `url('${backgroundImages[imageIndex]}')`
     let imageName = backgroundImages[imageIndex].split('/').pop();
     let imageN = imageName.split('.')[0].replace(/-/g, ' ')
-
-
     if(imageN === 'florian olivo'){
         photographer.innerHTML = `<a target="_blank" href="https://unsplash.com/@florianolv"> ${imageN}</a>`;
     } else if(imageN === 'jonathan petersson') {
@@ -173,7 +171,7 @@ function changeBackgroundImage(){
     } else if(imageN === 'uriel soberanes'){
         photographer.innerHTML = `<a href="https://unsplash.com/photos/man-wearing-sony-playstation-vr-MxVkWPiJALs" target="_blank">${imageN}</a>`
     } else if(imageN === 'igor karimov'){
-        photographer.innerHTML = `<a href="https://unsplash.com/@ingvar_erik"_blank">${imageN}</a>`
+        photographer.innerHTML = `<a href="https://unsplash.com/@ingvar_erik" target="_blank">${imageN}</a>`
     }
     imageIndex = (imageIndex + 1) % backgroundImages.length
 }
